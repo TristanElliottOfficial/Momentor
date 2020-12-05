@@ -1,0 +1,22 @@
+/**
+ * ============================
+ * Primary Button Gradients
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-gradient-primary {
+  @apply bg-gradient-to-r from-blue-700 to-blue-600 text-blue-50;
+}
+.button-gradient-primary:hover {
+  @apply bg-gradient-to-r from-blue-600 to-blue-500 text-blue-100;
+}
+.button-gradient-primary:focus {
+  @apply bg-gradient-to-r from-blue-600 to-blue-500 text-blue-200;
+}
+.button-gradient-primary:active {
+  @apply bg-gradient-to-r from-blue-800 to-blue-600 text-blue-300;
+}

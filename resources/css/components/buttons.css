@@ -1,0 +1,66 @@
+/**
+ * ============================
+ * Main Button Component File
+ * ============================
+ *
+ * Description:  This file contains the css classes for this applications button
+ *               components. These styles and classes are available globally.
+ * ----
+ * Author:      Tristan Elliott [ https://www.tristanelliott.co.za/momentor ]
+ * Package:      Momentor Css Framework
+ * Version:      1.0.0 ( alpha )
+ *
+ * TODO Before we publish this application, we need to remove the css comments.
+ */
+
+/**
+ * ============================
+ * Import Button Partials
+ * ============================
+ * 1. Button Variants.
+ * 2. Button Gradients.
+ * 3. Button Sizes.
+ *
+ * TODO Finish the documentation for the button classes.
+ */
+
+@import "./button-variants.css";   /* Button Variants */
+@import "./button-gradients.css";  /* Button Gradients */
+@import "./button-sizes.css";      /* Button Sizes */
+
+/**
+ * ============================
+ * Basic Button Styling
+ * ============================
+ *
+ * Using Tailwindcss as our base for our framework. Below we have the basic button
+ * styling using the Tailwindcss utility classes and their @apply directive.
+ */
+
+/* Anchor - Button eg: <a href="#" class="button">Button Link</a> */
+.button {
+  @apply py-2 px-4 text-base font-light appearance-none outline-none rounded;
+}
+.button:focus {
+  @apply outline-none;
+}
+
+/* Button - Button eg: <button type="button" class="button">Button</button> */
+button.button {
+  @apply py-2 px-4 text-base font-light appearance-none outline-none rounded;
+}
+button.button:focus {
+  @apply outline-none;
+}
+
+/**
+ * Button Animation Styling
+ *
+ * TODO Finish the documentation of the button animation.
+ */
+.button-animate {
+  @apply transition duration-200 ease-in-out transform;
+}
+.button-animate:hover {
+  @apply opacity-75;
+}

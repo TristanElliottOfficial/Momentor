@@ -9,23 +9,33 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 /**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
+ * Registering Vue Components
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * @description We will register our components to use them globaly in out application.
+ * @version 1.0.0
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+// Sidebar Container
+Vue.component('v-sidebar', require('./components/Sidebar/Sidebar.vue').default);
+// Sidebar Components
+Vue.component('v-sidebar-brand', require('./components/Sidebar/Components/SidebarBrand.vue').default);
+Vue.component('v-sidebar-menu-container', require('./components/Sidebar/Components/SidebarMenuContainer.vue').default);
+Vue.component('v-sidebar-menu-nav', require('./components/Sidebar/Components/SidebarMenuNav.vue').default);
+Vue.component('v-sidebar-menu-link', require('./components/Sidebar/Components/SidebarMenuLink.vue').default);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Form Components
+Vue.component('v-form-group', require('./components/Forms/Components/FormGroup.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+// Input Components
+Vue.component('v-text-input', require('./components/Forms/Components/Input/TextInput.vue').default);
+Vue.component('v-password-input', require('./components/Forms/Components/Input/PasswordInput.vue').default);
+
+Vue.component('v-form-label', require('./components/Forms/Components/FormLabel.vue').default);
+Vue.component('v-form-error', require('./components/Forms/Components/Validation/ErrorAlert.vue').default);
+
+
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
 
 const app = new Vue({
     el: '#app',

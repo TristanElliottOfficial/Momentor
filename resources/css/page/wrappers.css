@@ -1,0 +1,22 @@
+/**
+ * ============================
+ * Wrappers
+ * ============================
+ *
+ * Description:  This file contains the css classes for the applications page wrappers.
+ * ----
+ * Author:      Tristan Elliott
+ * Package:      Momentor
+ * Version:      1.0.0 alpha
+ *
+ */
+
+.page-wrapper {
+  @apply flex h-screen;
+}
+.sidebar-wrapper {
+  @apply w-64 bg-gray-900;
+}
+.main-wrapper {
+  @apply flex-1;
+}

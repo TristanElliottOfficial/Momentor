@@ -1,0 +1,114 @@
+/**
+ * ============================
+ * Primary Button Variant
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-primary {
+  @apply bg-blue-700 text-blue-50;
+}
+.button-primary:hover {
+  @apply bg-blue-600 text-blue-100;
+}
+.button-primary:focus {
+  @apply bg-blue-600 text-blue-200;
+}
+.button-primary:active {
+  @apply bg-blue-800 text-blue-300;
+}
+
+/**
+ * ============================
+ * Secondary Button Variant
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-secondary {
+  @apply bg-purple-700 text-purple-50;
+}
+.button-secondary:hover {
+  @apply bg-purple-600 text-purple-100;
+}
+.button-secondary:focus {
+  @apply bg-purple-600 text-purple-200;
+}
+.button-secondary:active {
+  @apply bg-purple-800 text-purple-300;
+}
+
+/**
+ * ============================
+ * Success Button Variant
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-success {
+  @apply bg-green-700 text-green-50;
+}
+.button-success:hover {
+  @apply bg-green-600 text-green-100;
+}
+.button-success:focus {
+  @apply bg-green-600 text-green-200;
+}
+.button-success:active {
+  @apply bg-green-800 text-green-300;
+}
+
+/**
+ * ============================
+ * Warning Button Variant
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-warning {
+  @apply bg-yellow-700 text-yellow-50;
+}
+.button-warning:hover {
+  @apply bg-yellow-600 text-yellow-100;
+}
+.button-warning:focus {
+  @apply bg-yellow-600 text-yellow-200;
+}
+.button-warning:active {
+  @apply bg-yellow-800 text-yellow-300;
+}
+
+/**
+ * ============================
+ * Danger Button Variant
+ * ============================
+ *
+ * Author: Tristan Elliott
+ * Date: 5 December 2020
+ *
+ * TODO When we push this to production we need to remove all the comments.
+ */
+.button-danger {
+  @apply bg-red-700 text-red-50;
+}
+.button-danger:hover {
+  @apply bg-red-600 text-red-100;
+}
+.button-danger:focus {
+  @apply bg-red-600 text-red-200;
+}
+.button-danger:active {
+  @apply bg-red-800 text-red-300;
+}

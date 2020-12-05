@@ -1,0 +1,42 @@
+/**
+ * ============================
+ * Pages Main Header Component
+ * ============================
+ *
+ * Description:  This file contains the css classes for the applications page Headers.
+ * ----
+ * Author:      Tristan Elliott
+ * Package:      Momentor
+ * Version:      1.0.0 alpha
+ *
+ * TODO Finish the documentation for the different header classes.
+ */
+
+.main-header {
+  @apply flex justify-between items-center;
+}
+
+/* Header Left */
+.main-header-left {
+  @apply p-6;
+}
+.main-header-left-title {
+  @apply font-light text-4xl text-gray-900 pb-1;
+}
+.main-header-left-meta {
+  @apply font-light text-gray-700;
+}
+
+/* Header Right */
+.main-header-right {
+  @apply p-6;
+}
+
+/* Header Action Button */
+.h-button {
+  @apply px-4 py-3 appearance-none focus:outline-none rounded font-light;
+}
+.h-button:focus {
+  @apply outline-none;
+}
+/* Button Variants */

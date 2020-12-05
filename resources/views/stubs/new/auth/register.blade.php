@@ -12,7 +12,7 @@
 
           <!-- Logo Container Start -->
             <div class="flex px-2 items center py-6">
-              <span class="text-6xl text-purple-700"><i class="fas fa-user-astronaut"></i></span>
+              <span class="text-6xl text-purple-700"><i class="fal fa-user-astronaut"></i></span>
               <div class="pl-3">
                 <h1 class="text-3xl text-gray-800">{{ __('Register') }}</h1>
                 <p class="font-light text-gray-500">{{ __('Please fill out the form below to register an account.') }}</p>
@@ -26,51 +26,62 @@
                 @csrf
                 <div class="py-2">
                   <label for="name" class="block py-2 text-sm font-light text-gray-700">
-                    <span class="text-gray-600"><i class="fas fa-envelope"></i></span>
+                    <span class="text-gray-600"><i class="fal fa-user"></i></span>
                     <span class="px-2">{{ __('Email Address') }}</span>
                     @error('name')
                       <span class="text-red-600 font-light uppercase" style="font-size: 8px">{{ __('* required') }}</span>
                     @enderror
                   </label>
-                  <input type="text" id="name" name="name" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('name') border-red-500 @enderror" placeholder="{{ __('Enter an Email Address') }}" />
+                  <input type="text" id="name" name="name" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('name') border-red-500 @enderror" placeholder="{{ __('Enter an Email Address') }}" required />
                   @error ('name')
                     <div class="py-2 px-3 mt-3 bg-red-200 rounded-r border-l-4 border-red-700">
-                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fas fa-exclamation-circle"></i></span>{{ $message }}</p>
+                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fal fa-exclamation-circle"></i></span>{{ $message }}</p>
                     </div>
                   @enderror
                 </div>
                 <div class="py-2">
                   <label for="email" class="block py-2 text-sm font-light text-gray-700">
-                    <span class="text-gray-600"><i class="fas fa-envelope"></i></span>
+                    <span class="text-gray-600"><i class="fal fa-envelope"></i></span>
                     <span class="px-2">{{ __('Email Address') }}</span>
                     @error('email')
                       <span class="text-red-600 font-light uppercase" style="font-size: 8px">{{ __('* required') }}</span>
                     @enderror
                   </label>
-                  <input type="email" id="email" name="email" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('email') border-red-500 @enderror" placeholder="{{ __('Enter an Email Address') }}" />
+                  <input type="email" id="email" name="email" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('email') border-red-500 @enderror" placeholder="{{ __('Enter an Email Address') }}" required />
                   @error ('email')
                     <div class="py-2 px-3 mt-3 bg-red-200 rounded-r border-l-4 border-red-700">
-                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fas fa-exclamation-circle"></i></span>{{ $message }}</p>
+                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fal fa-exclamation-circle"></i></span>{{ $message }}</p>
                     </div>
                   @enderror
                 </div>
                 <div class="py-2">
                   <label for="password_input" class="block py-2 text-sm font-light text-gray-700">
-                    <span class="text-gray-600"><i class="fas fa-lock"></i></span>
+                    <span class="text-gray-600"><i class="fal fa-lock"></i></span>
                     <span class="px-2">{{ __('Password') }}</span>
                     @error('password')
                       <span class="text-red-600 font-light uppercase" style="font-size: 8px">{{ __('* required') }}</span>
                     @enderror
                   </label>
-                  <input type="password" id="password_input" name="password" value="It Works!" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('password') border-red-500 @enderror" placeholder="{{ __('Enter your Password') }}" />
+                  <input type="password" id="password_input" name="password" value="It Works!" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none @error('password') border-red-500 @enderror" placeholder="{{ __('Enter your Password') }}" required />
                   <div id="input_controls" class="flex justify-end pt-2">
                     <button class="text-xs text-purple-700 hover:text-purple-700 focus:outline-none" role="reveal-password" onclick="show_password()"><i class="fas fa-eye pr-2"></i>Show Password</button>
                   </div>
                   @error('password')
                     <div class="py-2 px-3 mt-2 bg-red-200 rounded-r border-l-4 border-red-700">
-                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fas fa-exclamation-circle"></i></span>{{ $message }}</p>
+                      <p class="text-red-700 font-light text-sm"><span class="pr-2 text-red-800"><i class="fal fa-exclamation-circle"></i></span>{{ $message }}</p>
                     </div>
                   @enderror
+                </div>
+
+                <div class="py-2">
+                  <label for="password-confirm" class="block py-2 text-sm font-light text-gray-700">
+                    <span class="text-gray-600"><i class="fal fa-lock"></i></span>
+                    <span class="px-2">{{ __('Password Confirm') }}</span>
+                    @error('password')
+                      <span class="text-red-600 font-light uppercase" style="font-size: 8px">{{ __('* required') }}</span>
+                    @enderror
+                  </label>
+                  <input type="password" id="password-confirm" name="password_confirmation" class="block px-4 py-2 w-full rounded bg-gray-100 font-light border focus:outline-none" placeholder="{{ __('Confirm your Password') }}" required />
                 </div>
 
                 <div class="flex justify-between items-center w-full py-2">
